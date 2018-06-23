@@ -19,49 +19,230 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rGU-qR-W5q">
-                                <rect key="frame" x="10" y="76" width="355" height="72"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fbK-g8-S9d">
+                                <rect key="frame" x="65" y="76" width="244" height="312"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jnD-dU-TmE">
-                                        <rect key="frame" x="0.0" y="0.0" width="113" height="72"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                        <state key="normal" title="👽"/>
-                                        <connections>
-                                            <action selector="touchedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Jd-YW-Fnb"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JvF-mL-a2b">
-                                        <rect key="frame" x="121" y="0.0" width="113" height="72"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                        <state key="normal" title="🐹"/>
-                                        <connections>
-                                            <action selector="touchedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pyp-gV-R4r"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p56-dV-CGI">
-                                        <rect key="frame" x="242" y="0.0" width="113" height="72"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                        <state key="normal" title="🐷"/>
-                                        <connections>
-                                            <action selector="touchedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZJH-1V-YbB"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2CW-b7-Sqg">
+                                        <rect key="frame" x="0.0" y="0.0" width="244" height="72"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTg-5b-EuX" customClass="EmojiButton" customModule="MemoryGame">
+                                                <rect key="frame" x="0.0" y="0.0" width="55" height="72"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="insideColor">
+                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="touchedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XNS-3Y-4Af"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0tq-kw-Muf" customClass="EmojiButton" customModule="MemoryGame">
+                                                <rect key="frame" x="63" y="0.0" width="55" height="72"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <connections>
+                                                    <action selector="touchedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j8h-8Q-CJM"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jng-eT-jXr" customClass="EmojiButton" customModule="MemoryGame">
+                                                <rect key="frame" x="126" y="0.0" width="55" height="72"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="insideColor">
+                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="touchedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j1X-ML-ztb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjO-o4-Qq9" customClass="EmojiButton" customModule="MemoryGame">
+                                                <rect key="frame" x="189" y="0.0" width="55" height="72"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="insideColor">
+                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="touchedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kl9-91-gCr"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="B9Y-9E-2Np">
+                                        <rect key="frame" x="0.0" y="80" width="244" height="72"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRl-GO-eiv" customClass="EmojiButton" customModule="MemoryGame">
+                                                <rect key="frame" x="0.0" y="0.0" width="55" height="72"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="insideColor">
+                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="touchedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hGT-ui-z0S"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QkP-ge-NT8" customClass="EmojiButton" customModule="MemoryGame">
+                                                <rect key="frame" x="63" y="0.0" width="55" height="72"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <connections>
+                                                    <action selector="touchedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EiD-70-YZB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfh-tl-klv" customClass="EmojiButton" customModule="MemoryGame">
+                                                <rect key="frame" x="126" y="0.0" width="55" height="72"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="insideColor">
+                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="touchedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OzH-Zj-IbJ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgL-T3-GPj" customClass="EmojiButton" customModule="MemoryGame">
+                                                <rect key="frame" x="189" y="0.0" width="55" height="72"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="insideColor">
+                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="touchedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sY5-fE-GcH"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2yB-1E-rDX">
+                                        <rect key="frame" x="0.0" y="160" width="244" height="72"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oym-t8-BpE" customClass="EmojiButton" customModule="MemoryGame">
+                                                <rect key="frame" x="0.0" y="0.0" width="55" height="72"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="insideColor">
+                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="touchedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u3A-qc-ffX"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="irL-ML-5pW" customClass="EmojiButton" customModule="MemoryGame">
+                                                <rect key="frame" x="63" y="0.0" width="55" height="72"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <connections>
+                                                    <action selector="touchedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R1w-yh-aFC"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tsH-1r-d6R" customClass="EmojiButton" customModule="MemoryGame">
+                                                <rect key="frame" x="126" y="0.0" width="55" height="72"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="insideColor">
+                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="touchedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KzP-FT-DMe"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X0Z-a3-xHY" customClass="EmojiButton" customModule="MemoryGame">
+                                                <rect key="frame" x="189" y="0.0" width="55" height="72"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="insideColor">
+                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="touchedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aXh-t5-mSi"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Vgt-aH-K7M">
+                                        <rect key="frame" x="0.0" y="240" width="244" height="72"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s5I-2s-DOJ" customClass="EmojiButton" customModule="MemoryGame">
+                                                <rect key="frame" x="0.0" y="0.0" width="55" height="72"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="insideColor">
+                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="touchedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yGE-m3-q20"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4tL-TP-88o" customClass="EmojiButton" customModule="MemoryGame">
+                                                <rect key="frame" x="63" y="0.0" width="55" height="72"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <connections>
+                                                    <action selector="touchedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tB4-yd-2BF"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c85-7s-3hm" customClass="EmojiButton" customModule="MemoryGame">
+                                                <rect key="frame" x="126" y="0.0" width="55" height="72"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="insideColor">
+                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="touchedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YIK-LG-epV"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypw-ew-wtd" customClass="EmojiButton" customModule="MemoryGame">
+                                                <rect key="frame" x="189" y="0.0" width="55" height="72"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="insideColor">
+                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="touchedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K8U-1H-eQE"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="rGU-qR-W5q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="ASl-gG-CP3"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rGU-qR-W5q" secondAttribute="trailing" constant="10" id="eHN-6f-lVh"/>
-                            <constraint firstItem="rGU-qR-W5q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="jTl-0B-E3I"/>
+                            <constraint firstItem="fbK-g8-S9d" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="3RH-yK-kuz"/>
+                            <constraint firstItem="fbK-g8-S9d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="4yr-fX-AuE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fbK-g8-S9d" secondAttribute="trailing" constant="116" id="F0b-I4-3Ys"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="k1S-0b-n1f"/>
                     <connections>
-                        <outletCollection property="allButtons" destination="jnD-dU-TmE" collectionClass="NSMutableArray" id="3dr-Fx-CGx"/>
-                        <outletCollection property="allButtons" destination="JvF-mL-a2b" collectionClass="NSMutableArray" id="XZP-Yn-POT"/>
-                        <outletCollection property="allButtons" destination="p56-dV-CGI" collectionClass="NSMutableArray" id="hGq-li-l9P"/>
+                        <outletCollection property="allButtons" destination="xjO-o4-Qq9" collectionClass="NSMutableArray" id="ueZ-mX-gqL"/>
+                        <outletCollection property="allButtons" destination="Jng-eT-jXr" collectionClass="NSMutableArray" id="QLx-Tv-tt5"/>
+                        <outletCollection property="allButtons" destination="gTg-5b-EuX" collectionClass="NSMutableArray" id="Q1h-5c-WdO"/>
+                        <outletCollection property="allButtons" destination="0tq-kw-Muf" collectionClass="NSMutableArray" id="Lgy-6w-obf"/>
+                        <outletCollection property="allButtons" destination="rfh-tl-klv" collectionClass="NSMutableArray" id="od6-IW-FzN"/>
+                        <outletCollection property="allButtons" destination="zRl-GO-eiv" collectionClass="NSMutableArray" id="gT2-Zp-3Vb"/>
+                        <outletCollection property="allButtons" destination="QkP-ge-NT8" collectionClass="NSMutableArray" id="JBQ-B1-94d"/>
+                        <outletCollection property="allButtons" destination="jgL-T3-GPj" collectionClass="NSMutableArray" id="kYb-aY-NxE"/>
+                        <outletCollection property="allButtons" destination="irL-ML-5pW" collectionClass="NSMutableArray" id="AuX-Tr-m1W"/>
+                        <outletCollection property="allButtons" destination="oym-t8-BpE" collectionClass="NSMutableArray" id="ydg-1N-pPX"/>
+                        <outletCollection property="allButtons" destination="X0Z-a3-xHY" collectionClass="NSMutableArray" id="ViE-Rf-Xqp"/>
+                        <outletCollection property="allButtons" destination="tsH-1r-d6R" collectionClass="NSMutableArray" id="gZm-EC-PPt"/>
+                        <outletCollection property="allButtons" destination="4tL-TP-88o" collectionClass="NSMutableArray" id="y0E-rE-AwQ"/>
+                        <outletCollection property="allButtons" destination="c85-7s-3hm" collectionClass="NSMutableArray" id="dmZ-lX-Mba"/>
+                        <outletCollection property="allButtons" destination="ypw-ew-wtd" collectionClass="NSMutableArray" id="6cl-qU-bDK"/>
+                        <outletCollection property="allButtons" destination="s5I-2s-DOJ" collectionClass="NSMutableArray" id="NIg-nb-9In"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

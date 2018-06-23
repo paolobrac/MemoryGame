@@ -10,29 +10,77 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var emoji = ["👽","🐹","🐷"]
+    //var emoji = ["👽","🐹","🐷","🐰","🐼", "🐙", "🐒","🦉","🐝","🐴","🐿","🐱","🎃","🦁","🍓","🥕","🍷","🎈"]
+    var gameBoard = GameBoard(dimension: 16)
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    @IBOutlet var allButtons: [UIButton]!
+    @IBOutlet var allButtons: [EmojiButton]!
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     @IBAction func touchedButton(_ sender: Any) {
-       let abutton = sender as! UIButton
+       let abutton = sender as! EmojiButton
        let indice = allButtons.index(of: abutton)
         if abutton.title(for: .normal) == "" {
-            abutton.backgroundColor = .white
-            abutton.setTitle(emoji[indice!], for: .normal)
             
-            abutton.layer.transform = CATransform3DConcat(abutton.layer.transform, CATransform3DMakeRotation(CGFloat(M_PI),1.0,0.0,0.0))
+            UIView.animate(withDuration: 0.5,
+                           delay: 0.0,
+                           options: UIViewAnimationOptions.curveEaseIn,
+                           animations: { () -> Void in
+                            
+                            
+                            abutton.layer.transform = CATransform3DConcat(abutton.layer.transform, CATransform3DMakeRotation(CGFloat(M_PI)/2,0.0,1.0,0.0))
+            }, completion: { (finished) -> Void in
+                // ....
+                abutton.insideColor = .white
+                //abutton.setTitle(self.emoji[indice!], for: .normal)
+                abutton.setTitle(self.gameBoard?.element(atIndex: indice!), for: .normal)
+                UIView.animate(withDuration: 0.5,
+                               delay: 0.0,
+                               options: UIViewAnimationOptions.curveEaseOut,
+                               animations: { () -> Void in
+                                
+                                
+                                abutton.layer.transform = CATransform3DConcat(abutton.layer.transform, CATransform3DMakeRotation(CGFloat(M_PI)/2,0.0,1.0,0.0))
+                }, completion: { (finished) -> Void in
+                    // ....
+                })
+            })
+            
+            //abutton.layer.transform = CATransform3DConcat(abutton.layer.transform, CATransform3DMakeRotation(CGFloat(M_PI)/8,0.0,1.0,0.0))
+            
+            
         } else {
-            abutton.backgroundColor = .orange
-            abutton.setTitle("", for: .normal)
-            abutton.layer.transform = CATransform3DConcat(abutton.layer.transform, CATransform3DMakeRotation(CGFloat(M_PI),1.0,0.0,0.0))
+            
+            UIView.animate(withDuration: 0.5,
+                           delay: 0.0,
+                           options: UIViewAnimationOptions.curveEaseIn,
+                           animations: { () -> Void in
+                            abutton.layer.transform = CATransform3DConcat(abutton.layer.transform, CATransform3DMakeRotation(CGFloat(M_PI)/2,0.0,1.0,0.0))
+                            
+            }, completion: { (finished) -> Void in
+                // ....
+                abutton.insideColor = .red
+                abutton.setTitle("", for: .normal)
+                UIView.animate(withDuration: 0.5,
+                               delay: 0.0,
+                               options: UIViewAnimationOptions.curveEaseOut,
+                               animations: { () -> Void in
+                                abutton.layer.transform = CATransform3DConcat(abutton.layer.transform, CATransform3DMakeRotation(CGFloat(M_PI)/2,0.0,1.0,0.0))
+                                
+                }, completion: { (finished) -> Void in
+                    // ....
+                })
+            })
+            
+            
+            
+            //abutton.layer.transform = CATransform3DConcat(abutton.layer.transform, CATransform3DMakeRotation(CGFloat(M_PI)/8,0.0,1.0,0.0))
+           
         }
     }
     
