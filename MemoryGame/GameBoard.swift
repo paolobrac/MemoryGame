@@ -11,6 +11,14 @@ class GameBoard {
     var emoji = ["👽","🐹","🐷","🐰","🐼", "🐙", "🐒","🦉","🐝","🐴","🐿","🐱","🎃","🦁","🍓","🥕","🍷","🎈"]
     var simbolToPlay = [String]()
     var simbolToDraw = [String]()
+    enum gameState {
+        case start
+        case memorize
+        case pickupElements
+        case play
+        case finish
+    }
+    var currentState : gameState = .start
     init?(dimension: Int) {
         if dimension > emoji.count {
             return nil
@@ -20,7 +28,7 @@ class GameBoard {
             let choice = arc4random_uniform(UInt32(emoji.count))
             let elementChosen = emoji.remove(at: Int(choice))
             simbolToPlay.append(elementChosen)
-            
+            simbolToDraw.append(elementChosen)
         }
     }
     func element(atIndex: Int)  -> String {

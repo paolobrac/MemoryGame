@@ -216,6 +216,22 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTL-5o-wPn" customClass="EmojiButton" customModule="MemoryGame" customModuleProvider="target">
+                                <rect key="frame" x="143" y="555" width="88" height="92"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="insideColor">
+                                        <color key="value" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="pressedStartButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jsy-XL-ptF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -227,6 +243,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="k1S-0b-n1f"/>
                     <connections>
+                        <outlet property="startButton" destination="LTL-5o-wPn" id="de1-jw-NgY"/>
                         <outletCollection property="allButtons" destination="xjO-o4-Qq9" collectionClass="NSMutableArray" id="ueZ-mX-gqL"/>
                         <outletCollection property="allButtons" destination="Jng-eT-jXr" collectionClass="NSMutableArray" id="QLx-Tv-tt5"/>
                         <outletCollection property="allButtons" destination="gTg-5b-EuX" collectionClass="NSMutableArray" id="Q1h-5c-WdO"/>
