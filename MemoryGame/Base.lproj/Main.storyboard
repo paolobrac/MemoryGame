@@ -19,14 +19,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fbK-g8-S9d">
-                                <rect key="frame" x="65" y="76" width="244" height="312"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i33-Mo-t6p" customClass="TimerView" customModule="MemoryGame" customModuleProvider="target">
+                                <rect key="frame" x="16" y="64" width="343" height="14"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="numberOfSeconds">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="barColor">
+                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="currentSeconds">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fbK-g8-S9d">
+                                <rect key="frame" x="65" y="86" width="245" height="312"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2CW-b7-Sqg">
-                                        <rect key="frame" x="0.0" y="0.0" width="244" height="72"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="245" height="72"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTg-5b-EuX" customClass="EmojiButton" customModule="MemoryGame">
-                                                <rect key="frame" x="0.0" y="0.0" width="55" height="72"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="55.5" height="72"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="insideColor">
@@ -38,14 +53,14 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0tq-kw-Muf" customClass="EmojiButton" customModule="MemoryGame">
-                                                <rect key="frame" x="63" y="0.0" width="55" height="72"/>
+                                                <rect key="frame" x="63.5" y="0.0" width="55" height="72"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                 <connections>
                                                     <action selector="touchedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j8h-8Q-CJM"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jng-eT-jXr" customClass="EmojiButton" customModule="MemoryGame">
-                                                <rect key="frame" x="126" y="0.0" width="55" height="72"/>
+                                                <rect key="frame" x="126.5" y="0.0" width="55.5" height="72"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="insideColor">
@@ -57,7 +72,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjO-o4-Qq9" customClass="EmojiButton" customModule="MemoryGame">
-                                                <rect key="frame" x="189" y="0.0" width="55" height="72"/>
+                                                <rect key="frame" x="190" y="0.0" width="55" height="72"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="insideColor">
@@ -71,10 +86,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="B9Y-9E-2Np">
-                                        <rect key="frame" x="0.0" y="80" width="244" height="72"/>
+                                        <rect key="frame" x="0.0" y="80" width="245" height="72"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRl-GO-eiv" customClass="EmojiButton" customModule="MemoryGame">
-                                                <rect key="frame" x="0.0" y="0.0" width="55" height="72"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="55.5" height="72"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="insideColor">
@@ -86,14 +101,14 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QkP-ge-NT8" customClass="EmojiButton" customModule="MemoryGame">
-                                                <rect key="frame" x="63" y="0.0" width="55" height="72"/>
+                                                <rect key="frame" x="63.5" y="0.0" width="55" height="72"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                 <connections>
                                                     <action selector="touchedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EiD-70-YZB"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfh-tl-klv" customClass="EmojiButton" customModule="MemoryGame">
-                                                <rect key="frame" x="126" y="0.0" width="55" height="72"/>
+                                                <rect key="frame" x="126.5" y="0.0" width="55.5" height="72"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="insideColor">
@@ -105,7 +120,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgL-T3-GPj" customClass="EmojiButton" customModule="MemoryGame">
-                                                <rect key="frame" x="189" y="0.0" width="55" height="72"/>
+                                                <rect key="frame" x="190" y="0.0" width="55" height="72"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="insideColor">
@@ -119,10 +134,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2yB-1E-rDX">
-                                        <rect key="frame" x="0.0" y="160" width="244" height="72"/>
+                                        <rect key="frame" x="0.0" y="160" width="245" height="72"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oym-t8-BpE" customClass="EmojiButton" customModule="MemoryGame">
-                                                <rect key="frame" x="0.0" y="0.0" width="55" height="72"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="55.5" height="72"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="insideColor">
@@ -134,14 +149,14 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="irL-ML-5pW" customClass="EmojiButton" customModule="MemoryGame">
-                                                <rect key="frame" x="63" y="0.0" width="55" height="72"/>
+                                                <rect key="frame" x="63.5" y="0.0" width="55" height="72"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                 <connections>
                                                     <action selector="touchedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R1w-yh-aFC"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tsH-1r-d6R" customClass="EmojiButton" customModule="MemoryGame">
-                                                <rect key="frame" x="126" y="0.0" width="55" height="72"/>
+                                                <rect key="frame" x="126.5" y="0.0" width="55.5" height="72"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="insideColor">
@@ -153,7 +168,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X0Z-a3-xHY" customClass="EmojiButton" customModule="MemoryGame">
-                                                <rect key="frame" x="189" y="0.0" width="55" height="72"/>
+                                                <rect key="frame" x="190" y="0.0" width="55" height="72"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="insideColor">
@@ -167,10 +182,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Vgt-aH-K7M">
-                                        <rect key="frame" x="0.0" y="240" width="244" height="72"/>
+                                        <rect key="frame" x="0.0" y="240" width="245" height="72"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s5I-2s-DOJ" customClass="EmojiButton" customModule="MemoryGame">
-                                                <rect key="frame" x="0.0" y="0.0" width="55" height="72"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="55.5" height="72"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="insideColor">
@@ -182,14 +197,14 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4tL-TP-88o" customClass="EmojiButton" customModule="MemoryGame">
-                                                <rect key="frame" x="63" y="0.0" width="55" height="72"/>
+                                                <rect key="frame" x="63.5" y="0.0" width="55" height="72"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                 <connections>
                                                     <action selector="touchedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tB4-yd-2BF"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c85-7s-3hm" customClass="EmojiButton" customModule="MemoryGame">
-                                                <rect key="frame" x="126" y="0.0" width="55" height="72"/>
+                                                <rect key="frame" x="126.5" y="0.0" width="55.5" height="72"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="insideColor">
@@ -201,7 +216,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypw-ew-wtd" customClass="EmojiButton" customModule="MemoryGame">
-                                                <rect key="frame" x="189" y="0.0" width="55" height="72"/>
+                                                <rect key="frame" x="190" y="0.0" width="55" height="72"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="insideColor">
@@ -216,9 +231,8 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTL-5o-wPn" customClass="EmojiButton" customModule="MemoryGame" customModuleProvider="target">
-                                <rect key="frame" x="143" y="555" width="88" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTL-5o-wPn" customClass="EmojiButton" customModule="MemoryGame" customModuleProvider="target">
+                                <rect key="frame" x="143" y="537" width="88" height="86"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                 <state key="normal" title="START">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -236,14 +250,22 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="fbK-g8-S9d" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="3RH-yK-kuz"/>
-                            <constraint firstItem="fbK-g8-S9d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="4yr-fX-AuE"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fbK-g8-S9d" secondAttribute="trailing" constant="116" id="F0b-I4-3Ys"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fbK-g8-S9d" secondAttribute="trailing" constant="65" id="Do7-V9-8Hx"/>
+                            <constraint firstItem="fbK-g8-S9d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="IC1-AL-Ldm"/>
+                            <constraint firstItem="LTL-5o-wPn" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="TGM-Vc-Dls"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="i33-Mo-t6p" secondAttribute="trailing" constant="16" id="a1s-d9-w6G"/>
+                            <constraint firstItem="i33-Mo-t6p" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="f2Y-ke-Cpd"/>
+                            <constraint firstItem="LTL-5o-wPn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="143" id="gJI-DM-Cy7"/>
+                            <constraint firstItem="fbK-g8-S9d" firstAttribute="top" secondItem="i33-Mo-t6p" secondAttribute="bottom" constant="8" id="krD-6X-sCh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LTL-5o-wPn" secondAttribute="trailing" constant="144" id="n3L-8t-gNo"/>
+                            <constraint firstItem="i33-Mo-t6p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="pDp-XV-cdz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="k1S-0b-n1f"/>
                     <connections>
                         <outlet property="startButton" destination="LTL-5o-wPn" id="de1-jw-NgY"/>
+                        <outlet property="timeLabel" destination="i33-Mo-t6p" id="2Db-sM-ZuQ"/>
                         <outletCollection property="allButtons" destination="xjO-o4-Qq9" collectionClass="NSMutableArray" id="ueZ-mX-gqL"/>
                         <outletCollection property="allButtons" destination="Jng-eT-jXr" collectionClass="NSMutableArray" id="QLx-Tv-tt5"/>
                         <outletCollection property="allButtons" destination="gTg-5b-EuX" collectionClass="NSMutableArray" id="Q1h-5c-WdO"/>
@@ -277,12 +299,43 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="JWc-gA-10K"/>
+                        <segue destination="FbG-aL-Q70" kind="relationship" relationship="rootViewController" id="GZ9-68-3W5"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ot7-en-zLa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-68" y="-564.46776611694156"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="eko-xM-u8U">
+            <objects>
+                <viewController id="FbG-aL-Q70" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kmJ-nB-rE0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCQ-Hk-H2j">
+                                <rect key="frame" x="150" y="318" width="75" height="30"/>
+                                <state key="normal" title="New Game"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="3Nv-7K-g0u"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WCQ-Hk-H2j" firstAttribute="centerY" secondItem="kmJ-nB-rE0" secondAttribute="centerY" id="0D1-p4-Xwc"/>
+                            <constraint firstItem="WCQ-Hk-H2j" firstAttribute="centerX" secondItem="kmJ-nB-rE0" secondAttribute="centerX" id="xxF-px-8xM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HQn-ce-Ays"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="LbJ-5j-1Ph"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Roh-z9-Jmr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="822" y="-650"/>
         </scene>
     </scenes>
 </document>

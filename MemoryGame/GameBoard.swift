@@ -46,6 +46,8 @@ class GameBoard {
             let elementChosen = simbolToDraw.remove(at: Int(choice))
             return elementChosen
         } else {
+            let nc = NotificationCenter.default
+            nc.post(name: Notification.Name("EndGame"), object: nil)
             return nil
         }
         

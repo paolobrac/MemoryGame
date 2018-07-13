@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2855450620E7DAD8006A52EB /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2855450520E7DAD8006A52EB /* TimerView.swift */; };
+		2855450820F2208D006A52EB /* LevelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2855450720F2208D006A52EB /* LevelManager.swift */; };
 		28AFCB0B20D7E3530064330E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AFCB0A20D7E3530064330E /* AppDelegate.swift */; };
 		28AFCB0D20D7E3530064330E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AFCB0C20D7E3530064330E /* ViewController.swift */; };
 		28AFCB1020D7E3530064330E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28AFCB0E20D7E3530064330E /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2855450520E7DAD8006A52EB /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		2855450720F2208D006A52EB /* LevelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelManager.swift; sourceTree = "<group>"; };
 		28AFCB0720D7E3530064330E /* MemoryGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28AFCB0A20D7E3530064330E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28AFCB0C20D7E3530064330E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,12 +64,14 @@
 			children = (
 				28AFCB0A20D7E3530064330E /* AppDelegate.swift */,
 				28AFCB0C20D7E3530064330E /* ViewController.swift */,
+				2855450720F2208D006A52EB /* LevelManager.swift */,
 				28AFCB1C20DBD7AA0064330E /* EmojiButton.swift */,
 				28AFCB0E20D7E3530064330E /* Main.storyboard */,
 				28AFCB1E20DD49C80064330E /* GameBoard.swift */,
 				28AFCB1120D7E3550064330E /* Assets.xcassets */,
 				28AFCB1320D7E3550064330E /* LaunchScreen.storyboard */,
 				28AFCB1620D7E3550064330E /* Info.plist */,
+				2855450520E7DAD8006A52EB /* TimerView.swift */,
 			);
 			path = MemoryGame;
 			sourceTree = "<group>";
@@ -141,9 +147,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2855450620E7DAD8006A52EB /* TimerView.swift in Sources */,
 				28AFCB1F20DD49C80064330E /* GameBoard.swift in Sources */,
 				28AFCB0D20D7E3530064330E /* ViewController.swift in Sources */,
 				28AFCB0B20D7E3530064330E /* AppDelegate.swift in Sources */,
+				2855450820F2208D006A52EB /* LevelManager.swift in Sources */,
 				28AFCB1D20DBD7AA0064330E /* EmojiButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
