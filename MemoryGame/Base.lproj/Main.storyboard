@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -231,8 +232,11 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTL-5o-wPn" customClass="EmojiButton" customModule="MemoryGame" customModuleProvider="target">
-                                <rect key="frame" x="143" y="537" width="88" height="86"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTL-5o-wPn" customClass="EmojiButton" customModule="MemoryGame" customModuleProvider="target">
+                                <rect key="frame" x="143" y="510" width="88" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="LTL-5o-wPn" secondAttribute="height" multiplier="44:43" id="Ydx-e8-4Ek"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                 <state key="normal" title="START">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -247,15 +251,15 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="fbK-g8-S9d" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="3RH-yK-kuz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fbK-g8-S9d" secondAttribute="trailing" constant="65" id="Do7-V9-8Hx"/>
                             <constraint firstItem="fbK-g8-S9d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="IC1-AL-Ldm"/>
-                            <constraint firstItem="LTL-5o-wPn" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="TGM-Vc-Dls"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="i33-Mo-t6p" secondAttribute="trailing" constant="16" id="a1s-d9-w6G"/>
                             <constraint firstItem="i33-Mo-t6p" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="f2Y-ke-Cpd"/>
                             <constraint firstItem="LTL-5o-wPn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="143" id="gJI-DM-Cy7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LTL-5o-wPn" secondAttribute="bottom" constant="27" id="hTs-Uj-a6I"/>
                             <constraint firstItem="fbK-g8-S9d" firstAttribute="top" secondItem="i33-Mo-t6p" secondAttribute="bottom" constant="8" id="krD-6X-sCh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LTL-5o-wPn" secondAttribute="trailing" constant="144" id="n3L-8t-gNo"/>
                             <constraint firstItem="i33-Mo-t6p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="pDp-XV-cdz"/>
@@ -314,9 +318,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCQ-Hk-H2j">
-                                <rect key="frame" x="150" y="318" width="75" height="30"/>
-                                <state key="normal" title="New Game"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCQ-Hk-H2j">
+                                <rect key="frame" x="97" y="277" width="180" height="113"/>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="29"/>
+                                <state key="normal" title="New Game">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="3Nv-7K-g0u"/>
                                 </connections>
@@ -335,7 +342,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Roh-z9-Jmr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="822" y="-650"/>
+            <point key="canvasLocation" x="821.60000000000002" y="-650.82458770614699"/>
         </scene>
     </scenes>
 </document>

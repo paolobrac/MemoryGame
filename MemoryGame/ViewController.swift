@@ -151,6 +151,8 @@ class ViewController: UIViewController {
         switch gameBoard!.currentState {
         case .start:
             showAllButtons()
+        case .memorize:
+            finishShowingButtons()
         default:
             print()
         }
@@ -160,7 +162,23 @@ class ViewController: UIViewController {
         print("Seconds")
         print(levelManager.getNumberOfSecondsToShow())
         for abutton in allButtons {
-            
+            //using transizion
+            UIView.transition(with: abutton, duration: 1.5, options: [.transitionFlipFromRight], animations: {() -> Void in abutton.insideColor = .white
+                //abutton.setTitle(self.emoji[indice!], for: .normal)
+                abutton.setTitle(self.gameBoard?.element(atIndex: self.allButtons.index(of: abutton)!), for: .normal)}
+                , completion: { (finished) -> Void in
+                    //self.finishShowingButtons()
+                    let lastIndex = self.allButtons.index(of: abutton)! + 1
+                    if (lastIndex >= self.allButtons.count) {
+                        self.timeLabel.numberOfSeconds = self.levelManager.getNumberOfSecondsToImpress()
+                        self.timeLabel.currentSeconds = 0
+                        self.timeLabel.barColor = .red
+                        self.startTimer = Date()
+                        self.runTimer()
+                    }
+                        
+                    })
+            /*
             UIView.animate(withDuration: 0.5,
                            delay: 0.0,
                            options: UIViewAnimationOptions.curveEaseIn,
@@ -196,7 +214,7 @@ class ViewController: UIViewController {
  
                 })
                 
-            })
+            }) */
             
         }
     }
@@ -287,6 +305,20 @@ class ViewController: UIViewController {
     }
     func finishShowingButtons() {
         for abutton in allButtons {
+            UIView.transition(with: abutton, duration: 1.5, options: [.transitionFlipFromLeft], animations: {() -> Void in abutton.insideColor = .red
+                abutton.setTitle("", for: .normal) }
+                , completion: { (finished) -> Void in
+                    //self.finishShowingButtons()
+                    let lastIndex = self.allButtons.index(of: abutton)! + 1
+                    if (lastIndex >= self.allButtons.count) {
+                        self.startButton.titleLabel?.text = ""
+                        self.startButton.titleLabel?.font = UIFont(name: "Helvetica", size: 50.0)
+                        self.runTimer()
+                        self.startPickingElements()
+                    }
+                    
+            })
+            /*
             UIView.animate(withDuration: 0.5,
                            delay: 0.0,
                            options: UIViewAnimationOptions.curveEaseIn,
@@ -316,7 +348,7 @@ class ViewController: UIViewController {
                     
                     
                 })
-            })
+            }) */
         }
     }
     func endGameLosing(){
